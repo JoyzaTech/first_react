@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'Mono';
+    src: url('/public/fonts/mono.ttf') format('truetype'); /* Adjust path as needed */
+}
+
+.background {
+    width: 200px;          /* Width of the rectangle */
+    height: 300px;         /* Height of the rectangle */
+    background-color: #555555b0; /* Set your desired background color */
+    border-radius: 10px;   /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: shadow effect */
+}
+.firstName{
+    font-size: 20px;
+    color: white;
+    text-align: left;
+    font-family: "Mono";
+    padding-left: 20px;
+    padding-top: 20px;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.502);
+}
+.lastName{
+    font-size: 15px;
+    color: white;
+    text-align: left;
+    font-family: "Mono";
+    padding-left: 20px;
+    margin-top: -17px;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.338);
+}
