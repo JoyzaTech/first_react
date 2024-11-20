@@ -9,22 +9,82 @@
     background-color: #555555b0; /* Set your desired background color */
     border-radius: 10px;   /* Optional: rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: shadow effect */
+    position: relative;    /* Needed for absolute positioning of the icon */
 }
-.firstName{
+
+.name-container {
+    position: absolute; /* Position it within the parent container */
+    top: 0; /* Align to the top of the card */
+    left: 0; /* Align to the left of the card */
+    width: 100%; /* Match the full width of the card */
+    height: 35px; /* Shorter height for the name section */
+    background: rgba(85, 85, 85, 0.6); /* Dark transparent background */
+    border-radius: 10px; /* Ensure all corners are rounded */
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Arrange items vertically */
+    justify-content: center; /* Center items vertically */
+    padding-left: 20px; /* Add padding for text */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional: shadow effect */
+    box-sizing: border-box; /* Prevent overflowing content */
+    overflow: hidden; /* Hide any overflow from rounded corners */
+}
+
+.firstName {
+    font-size: 15px;
+    font-family: "Mono";
+    color: white;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin: 0; /* Remove default margin */
+}
+
+.lastName {
+    font-size: 8px;
+    color: white;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    margin: 0; /* Remove default margin */
+}
+
+.icon-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 35px;
+    height: 55%;
+    background: rgba(208, 208, 208, 0.246);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px 0;
+    backdrop-filter: blur(10px);
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.2);
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease-in-out; /* Smooth fade-in/out effect */
+    pointer-events: none; /* Prevent interaction when hidden */
+}
+
+/* Show the icon container when the card is hovered */
+.profile-card:hover .icon-container {
+    opacity: 1; /* Fully visible */
+    pointer-events: auto; /* Enable interaction */
+}
+
+.emailIcon,
+.facebookIcon,
+.githubIcon,
+.instagramIcon {
     font-size: 20px;
     color: white;
-    text-align: left;
-    font-family: "Mono";
-    padding-left: 20px;
-    padding-top: 20px;
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.502);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.915);
+    margin: 10px 0;
+    transition: transform 0.2s ease-in-out; /* Smooth scaling effect */
 }
-.lastName{
-    font-size: 15px;
-    color: white;
-    text-align: left;
-    font-family: "Mono";
-    padding-left: 20px;
-    margin-top: -17px;
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.338);
+
+/* Slight scaling effect on hover for individual icons */
+.icon-container:hover .emailIcon,
+.icon-container:hover .facebookIcon,
+.icon-container:hover .githubIcon,
+.icon-container:hover .instagramIcon {
+    transform: scale(1.1); /* Scale up the icon slightly */
 }
