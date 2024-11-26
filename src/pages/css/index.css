@@ -1,13 +1,31 @@
-body {
+/* Apply a full-height flexbox layout */
+html, body {
+  height: 100%;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-image: url('/public/images/stryder.jpeg'); /* Path to your image */
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-position: center; /* Centers the image */
+  background-repeat: repeat; /* Ensures the image doesn't repeat */
+  height: 100vh; /* Ensures the background covers the full viewport height */
+  margin: 0; /* Removes default margin */
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Ensure the layout fills the available space */
+.layout {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Push the footer to the bottom */
+}
+
+footer {
+  margin-top: auto; /* Automatically position the footer at the bottom */
 }
